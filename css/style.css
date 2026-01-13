@@ -1,0 +1,172 @@
+:root {
+  --bg: #0b0b0b;
+  --card: #121212;
+  --text: #eaeaea;
+  --green: #7CFC00;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* NAV */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 8%;
+}
+
+.har { color: #fff; }
+.rid { color: var(--green); }
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--text);
+}
+
+nav a:hover {
+  color: var(--green);
+}
+
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 80px 8%;
+  align-items: center;
+}
+
+.hero-text span {
+  color: var(--green);
+}
+
+.hero-img i {
+  font-size: 180px;
+  color: var(--green);
+}
+
+/* BUTTONS */
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.primary {
+  background: var(--green);
+  color: #000;
+}
+
+.secondary {
+  border: 1px solid var(--green);
+  color: var(--green);
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 8%;
+}
+
+/* SKILLS */
+.skill-line {
+  margin-bottom: 25px;
+}
+
+.skill-line span {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.bar {
+  background: #1c1c1c;
+  height: 8px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar div {
+  height: 100%;
+  background: linear-gradient(90deg, #7CFC00, #b6ff4d);
+  animation: load 2s ease forwards;
+}
+
+@keyframes load {
+  from { width: 0; }
+}
+
+/* PROJECTS */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background: var(--card);
+  padding: 25px;
+  text-align: center;
+  border-radius: 12px;
+  border: 1px solid #1f1f1f;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.project-icon {
+  font-size: 45px;
+  color: var(--green);
+  margin-bottom: 15px;
+}
+
+/* CONTACT */
+.contact {
+  text-align: center;
+  background: #050505;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* ANIMATIONS */
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  nav {
+    display: none;
+  }
+}
